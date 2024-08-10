@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table,tr,td,th{
+            border: 1px solid black;
+            /* Collapse is used so that extra double border is removed unlike in the tables that we want */
+            border-collapse: collapse;
+        }
+        caption{
+            caption-side: bottom;
+        }
+        thead{
+            display: table-row-group;
+            vertical-align: middle;
+            border-color: red;
+            background-color: aquamarine;
+        }
+    </style>
+
+    
+</head>
+<body>
+    <!-- Best Practices -->
+
+    <!--  For row grouping we do using the table head, table body and the table footer -->
+
+   
+    <table>
+        <colgroup>
+            
+            <!-- Doing greenyellow color to both he columns 1 and 2 -->
+            <!-- <col span="12" style="background-color: greenyellow;"> -->
+
+            <!-- Doing nothing for the 1st column and green for the second column -->
+            <col span="1">
+            <col span="2" style="background-color: green;">
+        </colgroup>
+
+        
+        
+        <thead>
+            <tr>
+                <th>Month</th>
+                <th>Savings</th>
+            </tr>
+        </thead>
+            
+              
+        <tbody>
+            <tr>
+                <td>January</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>February</td>
+                <td>300</td>
+            </tr>
+            <tr>
+                <td>March</td>
+                <td>300</td>
+            </tr>
+        </tbody>
+        <tfoot >
+            <tr>
+                <!-- This display is used so that we can hide the table row -->
+                <!-- <td style="display: none;">Total</td> -->
+                 <td>Total</td>
+                <td>700</td>
+            </tr>
+        </tfoot>
+        <caption>My first Savings Table</caption>
+        
+    </table>
+
+
+    
+</body>
+</html>
